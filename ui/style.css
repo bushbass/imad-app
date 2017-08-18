@@ -26,6 +26,8 @@ body {
     font-family: sans-serif;
     padding: 0 20px;
 }
-header ul li {display: inline-block;
+header { 
 text-align: center;
+}
+header ul li {display: inline-block;
 }
