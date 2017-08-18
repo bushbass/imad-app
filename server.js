@@ -60,9 +60,9 @@ function createTemplate (data) {
     <body>
         <header class="container"> 
             <ul>
-                 <li><a href="/">Home</a>
+                 <li><a href="/">Home - </a>
                 </li>
-                <li><a href="/article-one">Article One</a>
+                <li><a href="/article-one">Article One - </a>
                 </li>
                 <li><a href="/article-two">Article Two</a>
                 </li>
