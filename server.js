@@ -62,11 +62,11 @@ function createTemplate (data) {
             <ul>
                  <li><a href="/">Home</a> - 
                 </li>
-                <li><a href="/article-one">Article One</a> - 
+                <li><a href="/articleOne">Article One</a> - 
                 </li>
-                <li><a href="/article-two">Article Two</a> - 
+                <li><a href="/articleTwo">Article Two</a> - 
                 </li>
-                <li><a href="/article-three">Article Three</a>
+                <li><a href="/articleThree">Article Three</a>
                 </li>
             </ul>
         </header>
@@ -99,7 +99,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res) {
-    var articleName = req.params.articleName
+    var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
 
