@@ -90,7 +90,7 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
-    res.send(createTemplate(articleTwo));
+    res.send(createTemplate(articles.articleTwo));
 });
 
 app.get('/article-three', function (req, res) {
