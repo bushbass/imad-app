@@ -2,7 +2,7 @@ console.log('Loaded!');
 
 var element = document.getElementById('main-txt');
 
-element.innderHTML = "changed text";
+element.innerHTML = "changed text";
 
 var img = document.getElementById('madi');
 
