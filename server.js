@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+    articleOne: articleOne = {
     title: 'Article One | Alex Nielsen',
     heading: 'Article One',
     date: 'August 8, 2017',
@@ -16,7 +17,29 @@ var articleOne = {
     </p>
     <p>This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. 
     </p>
-    `
+    `},
+    articleTwo: articleTwo = {
+    title: 'Article Two | Alex Nielsen',
+    heading: 'Article Two',
+    date: 'August 10, 2017',
+    content: `
+    <p>This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. 
+    </p>
+   <p>This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. 
+    </p> <p>This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. This is the content of my secod article. 
+    </p>
+    `},
+    articleThree: articleThree = {
+    title: 'Article Three | Alex Nielsen',
+    heading: 'Article Three',
+    date: 'August 12, 2017',
+    content: `
+    <p>This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. 
+    </p>
+  <p>This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. 
+    </p><p>This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. This is the content of my third article. 
+    </p>
+    `}
 };
 function createTemplate (data) {
     var title = data.title;
