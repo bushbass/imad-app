@@ -1,15 +1,16 @@
-console.log('Loaded!');
+// Counter code
 
-var element = document.getElementById('main-text');
-
-element.innerHTML = "changed text";
-
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft +1;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.onclick = function() {
-    var interval = setInterval(moveRight, 50);
+var button = document.getElementById('counter');
+button.onclick = function () {
+    
+    //make a request to coutner endpoint
+    
+    //capture response and store it in a variable
+    
+    //Render the varialbe in the corrects span
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
+    
+    
+    
 };
