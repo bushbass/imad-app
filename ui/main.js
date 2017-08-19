@@ -29,14 +29,9 @@ var nameInput = documentGetElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    // make a request to server and 
-    // send the name
+    // make a request to server and send the name
   
-  
-    
-    //capture list of names and render as
-    // a list
-    
+    //capture list of names and render as a list
     var names = ['dillion', 'georgia', 'alexis'];
     var list = '';
     for (var i=0; i < names.length; i++) {
