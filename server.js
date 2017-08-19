@@ -128,7 +128,7 @@ var comments = [];
 app.get('/submit-comment', function(req, res) {
     //get the name from the req. object
     var comment = req.query.comment;
-    
+    console.log(comment);
     names.push(comment);
     console.log(comments);
     // json
