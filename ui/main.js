@@ -1,6 +1,7 @@
 // Counter code
 
 var button = document.getElementById('counter');
+var counter;
 button.onclick = function () {
     
     //make a request to coutner endpoint
@@ -8,6 +9,7 @@ button.onclick = function () {
     //capture response and store it in a variable
     
     //Render the varialbe in the corrects span
+    counter++;
     var span = document.getElementById('count');
     span.innerHTML = counter.toString();
     
