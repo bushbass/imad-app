@@ -39,9 +39,9 @@ submit.onclick = function(){
     
     var names = ['dillion', 'georgia', 'alexis'];
     var list = '';
-    names.forEach(function(girl){
-        list=+ '<li>' + names[girl];
-    });
+    for (var i=0; i < names.length; i++) {
+        list+= '<li>' + names[i];
+    }
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
 };
