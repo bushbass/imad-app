@@ -4,7 +4,7 @@ var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function () {
     
-    //make a request to coutner endpoint
+    //create a request object
     var request = new XMLHttpRequest();
     
     
@@ -20,4 +20,6 @@ button.onclick = function () {
             }
         }
     };
+    request.open('GET', 'http://alexnielsen.imad.hasura-app.io/counter');
+    request.send(null);
 };
