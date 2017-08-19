@@ -23,3 +23,46 @@ button.onclick = function () {
     request.open('GET', 'http://alexnielsen.imad.hasura-app.io/counter');
     request.send(null);
 };
+
+// submit name
+var nameInput = documentGetElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    // make a request to server and 
+    // send the name
+  
+  
+    
+    //capture list of names and render as
+    // a list
+    
+    var names = ['dillion', 'georgia', 'alexis'];
+    var list = '';
+    names.forEach(function(girl){
+        list=+ '<li>' + names[girl];
+    });
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
