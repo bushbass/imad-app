@@ -20,7 +20,7 @@ button.onclick = function () {
             }
         }
     };
-    request.open('GET', 'http://alexnielsen.imad.hasura-app.io/counter');
+    request.open('GET', 'http://alexnielsen.imad.hasura-app.io/counter',true);
     request.send(null);
 };
 
@@ -29,18 +29,33 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    // make a request to server and send the name
   
-    //capture list of names and render as a list
-    var names = ['dillion', 'georgia', 'alexis', 'emma'];
-    var list = '';
-    for (var i=0; i < names.length; i++) {
-       list += `<li>${names[i]} </li>`;
-    }
-    var ul = document.getElementById('namelist');
-    console.log(list);
-    ul.innerHTML = list;
-};
+   //create a request object
+    var request = new XMLHttpRequest();
+    
+    //capture response and store it in a variable
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE){
+            //take some action
+            if (request.status === 200) {
+ 
+                //capture list of names and render as a list
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var list = '';
+                for (var i=0; i < names.length; i++) {
+                   list += `<li>${names[i]} </li>`;
+                }
+                var ul = document.getElementById('namelist');
+                console.log(list);
+                ul.innerHTML = list;
+                }
+            }
+        };
+   
+    request.open('GET', 'http://alexnielsen.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.send(null);
+}; 
 
 
 
