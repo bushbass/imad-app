@@ -89,7 +89,7 @@ function createTemplate (data) {
             <hr/>
             <br/>
               
-            <input type='textarea' id='name' placeholder='bob'>
+            <textarea id='name' placeholder='bob'></textarea>
             <input type='submit' value='submit' id='submit_btn'>
             
             <ul id='namelist'>
