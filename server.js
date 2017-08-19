@@ -85,16 +85,7 @@ function createTemplate (data) {
             <div>
                 ${content}
             </div>
-            
-            <hr/>
-            <br/>
-              
-            <input type='text' id='name' placeholder='name'>
-            <input type='submit' value='submit' id='submit_btn'>
-            
-            <ul id='namelist'>
-                
-            </ul>
+           
         </div>
         <script type="text/javascript" src="/ui/article.js">
         </script>
