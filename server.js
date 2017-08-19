@@ -88,14 +88,14 @@ function createTemplate (data) {
             
             <hr/>
             <br/>
-              <input type='text' id='name' placeholder='name'>
+              <input type='text' id='comment' placeholder='comment'>
             <input type='submit' value='submit' id='submit_btn'>
             
-            <ul id='namelist'>
+            <ul id='commentlist'>
                 
             </ul>
         </div>
-        
+        <script type="text/javascript" src="/ui/main.js">
     </body>
     
 </html>
@@ -122,6 +122,17 @@ app.get('/submit-name', function(req, res) {
     // json
     
     res.send(JSON.stringify(names));
+});
+
+var comments = [];
+app.get('/submit-comment', function(req, res) {
+    //get the name from the req. object
+    var comment = req.query.comment;
+    
+    names.push(comment);
+    // json
+    
+    res.send(JSON.stringify(comments));
 });
 
 app.get('/:articleName', function (req, res) {
