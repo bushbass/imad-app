@@ -124,18 +124,6 @@ app.get('/submit-name', function(req, res) {
     res.send(JSON.stringify(names));
 });
 
-var comments = [];
-app.get('/submit-comment', function(req, res) {
-    //get the name from the req. object
-    var comment = req.query.comment;
-    console.log(comment);
-    names.push(comment);
-    console.log(comments);
-    // json
-    
-    res.send(JSON.stringify(comments));
-});
-
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
