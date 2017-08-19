@@ -92,10 +92,11 @@ function createTemplate (data) {
             <input type='submit' value='submit' id='comment_btn'>
             
             <ul id='commentlist'>
-                <li>xomment</li>
+              
             </ul>
         </div>
-      
+        <script type="text/javascript" src="/ui/main.js">
+        </script>
     </body>
     
 </html>
@@ -122,6 +123,17 @@ app.get('/submit-name', function(req, res) {
     // json
     
     res.send(JSON.stringify(names));
+});
+
+var comments = [];
+app.get('/submit-comment', function(req, res) {
+    //get the name from the req. object
+    var comment = req.query.comment;
+    
+    comments.push(comment);
+    // json
+    
+    res.send(JSON.stringify(comments));
 });
 
 app.get('/:articleName', function (req, res) {
